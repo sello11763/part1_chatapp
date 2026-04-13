@@ -17,7 +17,9 @@ public class Login {
     
     //Creating a scanner
      Scanner scanner = new Scanner(System.in);
- private String registeredUsername;
+     
+    //Creating global variables
+    private String registeredUsername;
     private String registeredPassword;
     private String registeredCellPhone;
     private String registeredFirstName;
@@ -142,8 +144,9 @@ public class Login {
             return "Welcome " + registeredFirstName + " ," + registeredLastName + " it is great to see you.";
         }
         return "Welcome " + registeredUsername + ", it is great to see you again.";
-    }    
-
+    }  
+    
+    //Creating getters for the unit test
     public boolean isRegistered() {
         return registered;
     }
