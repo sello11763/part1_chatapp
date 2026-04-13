@@ -146,7 +146,7 @@ public class Login {
         return "Welcome " + registeredUsername + ", it is great to see you again.";
     }  
     
-    //Creating getters for the unit test
+    //Creating getters/methods for the unit test
     public boolean isRegistered() {
         return registered;
     }

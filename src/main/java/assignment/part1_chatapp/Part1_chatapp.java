@@ -13,7 +13,9 @@ package assignment.part1_chatapp;
 public class Part1_chatapp {
 
     public static void main(String[] args) {
-         Login login = new Login();
+
+        
+        Login login = new Login();
 
          
          System.out.println("=== REGISTER ===");
