@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author rasek
  */
-
+//Creating test class for login.
 public class LoginTest {
     
     //Creating variables for the unit test

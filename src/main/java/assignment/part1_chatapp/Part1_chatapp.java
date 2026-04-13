@@ -14,9 +14,11 @@ public class Part1_chatapp {
 
     public static void main(String[] args) {
 
-                Login login = new Login();
-         
-         System.out.println("=== REGISTER ===");
+        //Creates a login object that handles registration/login logic.
+        Login login = new Login();
+        
+        //Calls the login.registerUser method and prints the relavant output.
+        System.out.println("=== REGISTER ===");
         String registerMessage = login.registerUser();
         System.out.println(registerMessage);
 
@@ -24,6 +26,7 @@ public class Part1_chatapp {
             return;
         }
 
+        //Calls the login.loginUser method and prints the relavant output.
         System.out.println("\n=== LOGIN ===");
         login.loginUser();
         System.out.println(login.returnLoginStatus());

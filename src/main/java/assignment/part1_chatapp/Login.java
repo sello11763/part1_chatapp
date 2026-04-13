@@ -11,14 +11,14 @@ import java.util.Scanner;
  * @author rasek
  */
 
-//Creating a class called login
+//Creating a class called login.
 public class Login {
     
     
-    //Creating a scanner
+    //Creating a scanner.
      Scanner scanner = new Scanner(System.in);
      
-    //Creating global variables
+    //Creating global variables.
     private String registeredUsername;
     private String registeredPassword;
     private String registeredCellPhone;
@@ -28,7 +28,7 @@ public class Login {
     private boolean lastLoginSuccess;
 
     
-    //Creating a method to check the username
+    //Creating a method to check the username.
     public boolean checkUserName(String username) {
         return username != null
                 && username.contains("_")
@@ -45,7 +45,7 @@ public class Login {
                 && password.matches(".*[^a-zA-Z0-9].*");
     }
 
-    //Creating a method to check cellphone number that contains international code and at least 10 characters
+    //Creating a method to check cellphone number that contains international code and at least 10 characters.
     public boolean checkCellPhoneNumber(String cellPhoneNumber) {
         return cellPhoneNumber != null
                 && cellPhoneNumber.matches("^\\+27\\d{9}$");
@@ -69,7 +69,7 @@ public class Login {
     }
 
     
-    //Creating registration to display names for the assignment welcome message          
+    //Creating registration to display names for the assignment welcome message.          
     public String registerUser(String username, String password, String cellPhoneNumber,
             String firstName, String lastName) {
         if (!checkUserName(username)) {
@@ -122,7 +122,7 @@ public class Login {
         return loginUser(username, password);
     }
 
-    //Creating a method for login user to verify the login details
+    //Creating a method for login user to verify the login details.
     public Boolean loginUser(String username, String password) {
         if (!registered) {
             lastLoginSuccess = false;
@@ -132,7 +132,7 @@ public class Login {
         return lastLoginSuccess ? Boolean.TRUE : Boolean.FALSE;
     }
 
-    //Creating a method to return login status that returns necessary messaging for succeful login and failed login
+    //Creating a method to return login status that returns necessary messaging for succeful login and failed login.
     public String returnLoginStatus() {
         if (!registered) {
             return "Login failed: no user registered.";
@@ -146,7 +146,7 @@ public class Login {
         return "Welcome " + registeredUsername + ", it is great to see you again.";
     }  
     
-    //Creating getters/methods for the unit test
+    //Creating getters/methods for the unit test.
     public boolean isRegistered() {
         return registered;
     }
