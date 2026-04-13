@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author rasek
  */
+
 public class LoginTest {
     
     //Creating variables for the unit test
@@ -37,19 +38,22 @@ public class LoginTest {
         String msg = login.registerUser("kyle!!!!!!!", "Ch&&sec@ke99!", "+27838968976");
         assertEquals(USERNAME_ERROR, msg);
     }
-       
+    
+    
     //Test of messageForCellCapture_validSouthAfricanNumber method, of class Login.  
     @Test
     void messageForCellCapture_validSouthAfricanNumber() {
         assertEquals(CELL_SUCCESS, login.messageForCellCapture("+27838968976"));
     }
 
+    
     //Test of messageForCellCapture_invalidLocalStyleNumber method, of class Login.
     @Test
     void messageForCellCapture_invalidLocalStyleNumber() {
         assertEquals(CELL_ERROR, login.messageForCellCapture("08966553"));
     }
 
+    
     //Test of registerUser_invalidCell_returnsExactCellError method, of class Login.
     @Test
     void registerUser_invalidCell_returnsExactCellError() {
@@ -57,12 +61,14 @@ public class LoginTest {
         assertEquals(CELL_ERROR, msg);
     }
 
+    
     //Test of checkUserName_kyl_1_isCorrectlyFormatted method, of class Login.
     @Test
     void checkUserName_kyl_1_isCorrectlyFormatted() {
         assertTrue(login.checkUserName("kyl_1"));
     }
 
+    
     //Test of login_successful_returnsTrue method, of class Login.
     @Test
     void login_successful_returnsTrue() {
@@ -70,6 +76,7 @@ public class LoginTest {
         assertTrue(login.loginUser("a_b", "Abcdef1!"));
     }
 
+    
     //Test of login_failed_returnsFalse method, of class Login.
     @Test
     void login_failed_returnsFalse() {
@@ -77,6 +84,7 @@ public class LoginTest {
         assertFalse(login.loginUser("a_b", "Wrongpass1!"));
     }
 
+    
     //Test of registerUser_invalidUsername_noUnderscore_returnsExactUsernameError method, of class Login.
     @Test
     void registerUser_invalidUsername_noUnderscore_returnsExactUsernameError() {
@@ -84,18 +92,21 @@ public class LoginTest {
         assertEquals(USERNAME_ERROR, msg);
     }
 
+    
     //Test of messageForPasswordCapture_validComplexPassword method, of class Login.
     @Test
     void messageForPasswordCapture_validComplexPassword() {
         assertEquals(PASSWORD_SUCCESS, login.messageForPasswordCapture("Ch&&sec@ke99!"));
     }
 
+    
     //Test of messageForPasswordCapture_invalidPassword method, of class Login.
     @Test
     void messageForPasswordCapture_invalidPassword() {
         assertEquals(PASSWORD_ERROR, login.messageForPasswordCapture("password"));
     }
 
+    
     //Test of registerUser_invalidPassword_returnsExactPasswordError method, of class Login.
     @Test
     void registerUser_invalidPassword_returnsExactPasswordError() {
@@ -103,18 +114,21 @@ public class LoginTest {
         assertEquals(PASSWORD_ERROR, msg);
     }
 
+    
     //Test of checkUserName_rejectsTooLong method, of class Login.
     @Test
     void checkUserName_rejectsTooLong() {
         assertFalse(login.checkUserName("ab_cd_"));
     }
 
+    
     //Test of checkCellPhoneNumber_rejectsWithoutPlus method, of class Login.
     @Test
     void checkCellPhoneNumber_rejectsWithoutPlus() {
         assertFalse(login.checkCellPhoneNumber("27123456789"));
     }
 
+    
     //Test of returnLoginStatus_withoutRegisteredUser_mentionsNoRegistration method, of class Login.
     @Test
     void returnLoginStatus_withoutRegisteredUser_mentionsNoRegistration() {

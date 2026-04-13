@@ -109,7 +109,7 @@ public class Login {
                 + "contains at least eight characters, a capital letter, a number, and a special character.";
     }
 
-    //Prompts for login details and compares with stored registration.     
+    //Prompting for login details and compares with stored registration.     
     public Boolean loginUser() {
         if (!registered) {
             lastLoginSuccess = false;

@@ -15,7 +15,8 @@ public class Part1_chatapp {
     public static void main(String[] args) {
          Login login = new Login();
 
-        System.out.println("=== REGISTER ===");
+         
+         System.out.println("=== REGISTER ===");
         String registerMessage = login.registerUser();
         System.out.println(registerMessage);
 
